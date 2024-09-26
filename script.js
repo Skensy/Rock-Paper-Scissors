@@ -3,11 +3,11 @@
 function getComputerChoice(max) {
     let number = Math.floor(Math.random() * max);
     if (number === 0) {
-        console.log("Rock")
+        console.log("rock")
     } else if (number === 1) {
-        console.log("Paper")
+        console.log("paper")
     } else {
-        console.log("Scissors")
+        console.log("scissors")
     }
 
 }
