@@ -12,5 +12,9 @@ function getComputerChoice(max) {
 
 }
 
+function getHumanChoice() {
+    
+}
+
 
 console.log(getComputerChoice(3))
