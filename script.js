@@ -15,7 +15,6 @@ function getComputerChoice(max) {
 function getHumanChoice() {
   let request = prompt("Stiamo giocando a carta-forbice-sasso. Qual è la tua scelta?");
   if (request === "rock" || request === "paper" || request === "scissors") {
-    console.log(request);
     return request;
   } else {
     return getHumanChoice();
@@ -53,4 +52,27 @@ function playRound(computerChoice, humanChoice) {
   }
 }
 
-playRound();
+function playGame() {
+    // Move playRound and score variables here
+    // Play 5 rounds using a for loop
+    for (let i = 0; i < 5; i++) {
+      let computerChoice = getComputerChoice(3);
+      let humanChoice = getHumanChoice();
+      playRound(computerChoice, humanChoice);
+    }
+  
+    // Log the final scores
+    console.log("Human Score:", humanScore);
+    console.log("Computer Score:", computerScore);
+  
+    // Determine the winner
+    if (humanScore > computerScore) {
+      console.log("You won the game!");
+    } else if (computerScore > humanScore) {
+      console.log("The computer won the game!");
+    } else {
+      console.log("It's a tie!");
+    }
+  }
+  
+  playGame();
